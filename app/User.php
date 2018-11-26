@@ -31,10 +31,10 @@ class User extends Authenticatable
        protected $table = 'Usuario';
 
     protected $fillable = [
-        'cpf', 'telefone', 'nome', 'senha', 'email', 'tipo', 'punicao',
+        'cpf', 'telefone', 'nome', 'password', 'email', 'tipo', 'punicao',
     ];
 
     protected $hidden = [
-        'senha',
+        'password',
     ];
 }

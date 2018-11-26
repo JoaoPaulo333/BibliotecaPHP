@@ -116,7 +116,7 @@ return [
         ],
         [
             'text'        => 'Home',
-            'url'         => 'admin',
+            'url'         => 'home',
             'icon'        => 'home',
         ],
     ],

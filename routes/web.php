@@ -14,7 +14,10 @@
 Route::get('/', function () {
     return redirect('login');
 });
-Route::resource('autores','AutorController');
+
+$this->group(['middleware' => 'auth'],function(){
+    $this->get('autor','AutorController@index');
+});
 
 Auth::routes();
 

@@ -26,7 +26,7 @@ class AutorController extends Controller
 
     public function index()
     {
-        return view();
+        return view('autor.autores');
     }
 
     /**
