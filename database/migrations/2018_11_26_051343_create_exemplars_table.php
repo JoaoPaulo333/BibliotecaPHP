@@ -18,9 +18,9 @@ class CreateExemplarsTable extends Migration
             $table->integer('disponivel')->default(1);
             $table->string('arquivo');
             $table->integer('Livro_id');
-            $table->foreign('Livro_id')->references('id')->on("Livro")->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
+            $table->foreign('Livro_id')->references('id')->on("Livro")->onDelete('cascade');
         });
     }
 

@@ -17,11 +17,11 @@ class CreateReservasTable extends Migration
             $table->increments('id');
             $table->string('data');
             $table->integer('Livro_id')->unsigned();
-            $table->foreign('Livro_id')->references('id')->on("Livro")->onDelete('cascade');
             $table->integer('Usuario_id');
-            $table->foreign('Usuario_id')->references('id')->on("Usuario")->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
+            $table->foreign('Livro_id')->references('id')->on("Livro")->onDelete('cascade');
+            $table->foreign('Usuario_id')->references('id')->on("Usuario")->onDelete('cascade');
         });
     }
 

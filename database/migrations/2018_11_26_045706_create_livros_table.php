@@ -21,11 +21,11 @@ class CreateLivrosTable extends Migration
             $table->string('editora');
             $table->integer('ano');
             $table->integer('Autor_id')->unsigned();
-            $table->foreign('Autor_id')->references('id')->on("Autor")->onDelete('cascade');
             $table->integer('Categoria_id')->unsigned();
-            $table->foreign('Categoria_id')->references('id')->on("Categoria")->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
+            $table->foreign('Autor_id')->references('id')->on("Autor")->onDelete('cascade');
+            $table->foreign('Categoria_id')->references('id')->on("Categoria")->onDelete('cascade');
 
         });
     }
