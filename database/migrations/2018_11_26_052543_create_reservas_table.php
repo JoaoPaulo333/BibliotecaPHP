@@ -17,7 +17,7 @@ class CreateReservasTable extends Migration
             $table->increments('id');
             $table->string('data');
             $table->integer('Livro_id')->unsigned();
-            $table->integer('Usuario_id');
+            $table->integer('Usuario_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('Livro_id')->references('id')->on("Livro")->onDelete('cascade');

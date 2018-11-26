@@ -17,8 +17,8 @@ class CreateEmprestimosTable extends Migration
             $table->increments('id');
             $table->string('dataIda');
             $table->string('dataVolta');
-            $table->integer('Usuario_id');
-            $table->integer('Exemplar_id');
+            $table->integer('Usuario_id')->unsigned();
+            $table->integer('Exemplar_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('Exemplar_id')->references('id')->on("Exemplar")->onDelete('cascade');
