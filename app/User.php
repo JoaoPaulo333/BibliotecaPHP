@@ -28,7 +28,7 @@ class User extends Authenticatable
 //        'password', 'remember_token',
 //    ];
     use Notifiable;
-    protected $table = "Usuario";
+       protected $table = 'Usuario';
 
     protected $fillable = [
         'cpf', 'telefone', 'nome', 'senha', 'email', 'tipo', 'punicao',
